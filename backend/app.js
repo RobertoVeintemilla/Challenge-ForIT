@@ -68,13 +68,13 @@ app.put('/api/tasks/:id', (req, res) => {
 app.delete('/api/tasks/:id', (req, res) => {
   const { id } = req.params;
   const initialLength = tasks.length;
-  taks = tasks.filter(task = task.id !== id);
+  tasks = tasks.filter(task => task.id !== id);
 
-  if (tasks.lenth === initialLength) {
+  if (tasks.length === initialLength) {
     return res.status(404).json({ message: 'Task not found' })
   }
 
-  res.status(204).snd()
+  res.status(204).send()
 })
 
 app.use((err, req, res, next) => {

@@ -1,0 +1,57 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-unit);
+  margin-bottom: 1rem * 2;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  background-color: var(--light-bg);
+
+  input[type="text"],
+  textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    width: calc(100% - 1.6rem);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 80px;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--dark-text);
+
+    input[type="checkbox"] {
+      transform: scale(1.2)
+    }
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+    button[type="submit"] {
+      background-color: var(--primary-color);
+      &:hover {
+        background-color: darken(#007bff, 10%);
+      }
+    }
+
+    button[type="button"] {
+      background-color: var(--secondary-color);
+      &:hover {
+        background-color: darken(#6c757d, 10%);
+      }
+    }
+  }
+}
